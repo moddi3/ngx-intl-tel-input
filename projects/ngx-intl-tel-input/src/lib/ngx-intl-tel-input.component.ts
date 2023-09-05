@@ -94,7 +94,7 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 	constructor(private countryCodeData: CountryCode) {
 		// If this is not set, ngx-bootstrap will try to use the bs3 CSS (which is not what we've embedded) and will
 		// Add the wrong classes and such
-		setTheme('bs4');
+		// setTheme('bs4');
 	}
 
 	ngOnInit() {
