@@ -1,6 +1,6 @@
 {
   "name": "ngx-intl-tel-input-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -16,6 +16,7 @@
     "copy-files": "npm run copy-license && npm run copy-readme",
     "npm_pack": "npm run copy-files && cd dist/ngx-intl-tel-input && npm pack",
     "package": "npm run build_lib && npm run npm_pack",
+    "pub": "npm version patch --force && cd dist/ngx-intl-tel-input npm publish",
     "postinstall": "ngcc"
   },
   "dependencies": {
