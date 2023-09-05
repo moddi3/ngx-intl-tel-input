@@ -18,7 +18,6 @@
     "package": "npm run build_lib && npm run npm_pack",
     "postinstall": "ngcc"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "8.x - 15.x",
     "@angular/common": "8.x - 15.x",
