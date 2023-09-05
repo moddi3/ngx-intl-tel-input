@@ -1,13 +1,13 @@
 {
-	"name": "ngx-intl-tel-input",
+	"name": "@moddi3/ngx-intl-tel-input",
 	"version": "3.3.0",
 	"peerDependencies": {
-		"@angular/common": "8.x - 14.x",
-		"@angular/core": "8.x - 14.x",
-		"@angular/forms": "8.x - 14.x",
-		"google-libphonenumber": "^3.2.3",
+		"@angular/common": "8.x - 15.x",
+		"@angular/core": "8.x - 15.x",
+		"@angular/forms": "8.x - 15.x",
+		"google-libphonenumber": "^3.2.33",
 		"intl-tel-input": "^17.0.3",
-		"ngx-bootstrap": ">= 6.0.0"
+		"ngx-bootstrap": "^6.2.0"
 	},
 	"repository": {
 		"type": "git",
@@ -38,6 +38,6 @@
 		"url": "https://github.com/webcat12345/ngx-intl-tel-input/issues"
 	},
 	"devDependencies": {
-		"@types/google-libphonenumber": "^7.4.17"
+		"@types/google-libphonenumber": "^7.4.26"
 	}
 }
