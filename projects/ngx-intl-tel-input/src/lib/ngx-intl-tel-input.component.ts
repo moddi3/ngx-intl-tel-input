@@ -417,6 +417,9 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 			number,
 			lpn.PhoneNumberFormat[this.numberFormat]
 		);
+    if (this.selectedCountry.iso2 === 'ua') {
+      phoneNumber = '+380 31 123 4567';
+    }
 		if (phoneNumber.startsWith('+') && this.separateDialCode) {
 			phoneNumber = phoneNumber.substr(phoneNumber.indexOf(' ') + 1);
 		}
@@ -502,6 +505,10 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 				country.placeHolder = this.getPhoneNumberPlaceHolder(
 					country.iso2.toUpperCase()
 				);
+
+        if (country.iso2 === 'ua') {
+          country.placeHolder = '+380 31 123 4567';
+        }
 			}
 
 			this.allCountries.push(country);

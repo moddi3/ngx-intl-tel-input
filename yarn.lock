@@ -1840,7 +1840,7 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
-"@types/google-libphonenumber@^7.4.23":
+"@types/google-libphonenumber@^7.4.26":
   version "7.4.26"
   resolved "https://registry.yarnpkg.com/@types/google-libphonenumber/-/google-libphonenumber-7.4.26.tgz#5609109e720bff7ff076b8937dabfe2ff729cb61"
   integrity sha512-VkVHbNOMW3TFmXNvdShXjp6LBxaU5N88KotDb6ypkiSuwUyxNK4SM78EBNBh/0RjV0fiIbPcDzEVhDGSemHExw==

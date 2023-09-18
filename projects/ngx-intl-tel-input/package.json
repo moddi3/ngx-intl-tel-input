@@ -1,17 +1,17 @@
 {
 	"name": "@moddi3/ngx-intl-tel-input",
-	"version": "3.3.3",
+	"version": "3.3.4",
 	"peerDependencies": {
 		"@angular/common": "8.x - 15.x",
 		"@angular/core": "8.x - 15.x",
 		"@angular/forms": "8.x - 15.x",
 		"google-libphonenumber": "^3.2.33",
-		"intl-tel-input": "^17.0.3",
+		"intl-tel-input": "^18.2.1",
 		"ngx-bootstrap": "^6.2.0"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/webcat12345/ngx-intl-tel-input"
+		"url": "git+https://github.com/moddi3/ngx-intl-tel-input"
 	},
 	"author": {
 		"name": "webcat12345",
@@ -29,6 +29,7 @@
 		"angular 12",
 		"angular 13",
 		"angular 14",
+		"angular 15",
 		"intl-tel-input",
 		"phone number",
 		"validation"
