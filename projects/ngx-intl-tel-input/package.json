@@ -1,6 +1,6 @@
 {
 	"name": "@moddi3/ngx-intl-tel-input",
-	"version": "3.3.4",
+	"version": "3.3.5",
 	"peerDependencies": {
 		"@angular/common": "8.x - 15.x",
 		"@angular/core": "8.x - 15.x",

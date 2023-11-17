@@ -52,7 +52,7 @@ to **angular.json** styles array:
 
 ### Install This Library
 
-`$ npm install ngx-intl-tel-input --save`
+`$ npm install @moddi3/ngx-intl-tel-input --save`
 
 ## Usage
 
@@ -96,7 +96,8 @@ Or this:
 		[inputId]="my-input-id"
 		name="phone"
 		formControlName="phone"
-	></ngx-intl-tel-input>
+    [excludeCountries]="[CountryISO.Russia]"
+  ></ngx-intl-tel-input>
 </form>
 ```
 
@@ -121,7 +122,7 @@ Or this:
 | selectedCountryISO       | `<CountryISO>`           | `None`                            | Set specific country on load.                                                                                 |
 | separateDialCode         | `boolean`                | `false`                           | Visually separate dialcode into the drop down element.                                                        |
 | countryChange            | `<Country>`              | `None`                            | Emits country value when the user selects a country from the dropdown.                                        |
-
+| excludeCountries         | `<CountryISO>[]`         | `[]`                              | List of exluded countries, that will not be displayed in the dropdown.
 ## Supported Formats
 
 Following formats are supported

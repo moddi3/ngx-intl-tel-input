@@ -62,6 +62,7 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 	@Input() phoneValidation = true;
 	@Input() inputId = 'phone';
 	@Input() separateDialCode = false;
+  @Input() excludeCountries: Array<CountryISO> = [];
 	separateDialCodeClass: string;
 
 	@Output() readonly countryChange = new EventEmitter<Country>();
@@ -79,6 +80,7 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 
 	phoneNumber: string | undefined = '';
 	allCountries: Array<Country> = [];
+
 	preferredCountriesInDropDown: Array<Country> = [];
 	// Has to be 'any' to prevent a need to install @types/google-libphonenumber by the package user...
 	phoneUtil: any = lpn.PhoneNumberUtil.getInstance();
@@ -122,6 +124,11 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 	*/
 	init() {
 		this.fetchCountryData();
+
+    if (this.excludeCountries.length) {
+      this.allCountries = this.allCountries.filter((c) => !this.excludeCountries.includes(c.iso2 as CountryISO));
+    }
+
 		if (this.preferredCountries.length) {
 			this.updatePreferredCountries();
 		}
@@ -137,6 +144,7 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 				this.setSelectedCountry(this.allCountries[0]);
 			}
 		}
+
 		this.updateSelectedCountry();
 		this.checkSeparateDialCodeStyle();
 	}
@@ -492,7 +500,7 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 		this.countryCodeData.allCountries.forEach((c) => {
 			const country: Country = {
 				name: c[0].toString(),
-				iso2: c[1].toString(),
+				iso2: (c[1] as CountryISO),
 				dialCode: c[2].toString(),
 				priority: +c[3] || 0,
 				areaCodes: (c[4] as string[]) || undefined,
@@ -520,14 +528,9 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 	 */
 	private updatePreferredCountries() {
 		if (this.preferredCountries.length) {
-			this.preferredCountriesInDropDown = [];
-			this.preferredCountries.forEach((iso2) => {
-				const preferredCountry = this.allCountries.filter((c) => {
-					return c.iso2 === iso2;
-				});
-
-				this.preferredCountriesInDropDown.push(preferredCountry[0]);
-			});
+      this.preferredCountriesInDropDown = this.allCountries.filter((c) => {
+        return this.preferredCountries.includes(c.iso2) && !this.excludeCountries.includes(c.iso2 as CountryISO);
+      });
 		}
 	}
 
@@ -535,7 +538,7 @@ export class NgxIntlTelInputComponent implements OnInit, OnChanges {
 	 * Updates selectedCountry.
 	 */
 	private updateSelectedCountry() {
-		if (this.selectedCountryISO) {
+		if (this.selectedCountryISO && !this.excludeCountries.includes(this.selectedCountryISO)) {
 			// @ts-ignore
       this.selectedCountry = this.allCountries.find((c) => {
 				return c.iso2.toLowerCase() === this.selectedCountryISO.toLowerCase();
