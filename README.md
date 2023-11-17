@@ -96,7 +96,7 @@ Or this:
 		[inputId]="my-input-id"
 		name="phone"
 		formControlName="phone"
-    [excludeCountries]="[CountryISO.Russia]"
+		[excludeCountries]="[CountryISO.Russia]"
   ></ngx-intl-tel-input>
 </form>
 ```
