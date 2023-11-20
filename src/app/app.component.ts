@@ -1,4 +1,4 @@
-import { CountryISO } from 'projects/ngx-intl-tel-input/src/lib/enums/country-iso.enum';
+import { CountryISO } from 'projects/ngx-intl-tel-input/src/public_api';
 import { SearchCountryField } from 'projects/ngx-intl-tel-input/src/lib/enums/search-country-field.enum';
 
 import { Component } from '@angular/core';

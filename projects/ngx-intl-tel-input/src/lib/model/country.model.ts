@@ -1,4 +1,4 @@
-import { CountryISO } from "projects/ngx-intl-tel-input/src/public_api";
+import { CountryISO } from "../enums/country-iso.enum";
 
 export interface Country {
 	name: string;
