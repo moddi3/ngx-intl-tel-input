@@ -11,7 +11,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci
+          npm ci --legacy-peer-deps
           npm run build_lib
           npm run build
 
