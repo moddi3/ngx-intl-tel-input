@@ -17,8 +17,8 @@ An Angular package for entering and validating international telephone numbers. 
 Validation with [google-libphonenumber](https://github.com/ruimarinho/google-libphonenumber)
 
 | ngx-intl-tel-input | Angular        | ngx-bootstrap |
-| ------------------ |----------------| ------------- |
-| 16.x.x             | >= 16.x.x      | >= 6.0.0      |
+| ------------------ | -------------- | ------------- |
+| 16.x.x             | >= 16.x.x      | >= 9.0.0      |
 | 3.x.x              | 9.x.x - 15.x.x | >= 6.0.0      |
 | 2.x.x              | 8.x.x - 9.1.x  | 5.6.x         |
 
@@ -87,22 +87,7 @@ Or this:
 
 ```html
 <form #f="ngForm" [formGroup]="phoneForm">
-	<ngx-intl-tel-input
-		[cssClass]="'custom'"
-		[preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
-		[enableAutoCountrySelect]="false"
-		[enablePlaceholder]="true"
-		[searchCountryFlag]="true"
-		[searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
-		[selectFirstCountry]="false"
-		[selectedCountryISO]="CountryISO.India"
-		[maxLength]="15"
-		[phoneValidation]="true"
-		[inputId]="my-input-id"
-		name="phone"
-		formControlName="phone"
-		[excludeCountries]="[CountryISO.Russia]"
-  ></ngx-intl-tel-input>
+  <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]" [enableAutoCountrySelect]="false" [enablePlaceholder]="true" [searchCountryFlag]="true" [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" [selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15" [phoneValidation]="true" [inputId]="my-input-id" name="phone" formControlName="phone" [excludeCountries]="[CountryISO.Russia]"></ngx-intl-tel-input>
 </form>
 ```
 
@@ -127,7 +112,8 @@ Or this:
 | selectedCountryISO       | `<CountryISO>`           | `None`                            | Set specific country on load.                                                                                 |
 | separateDialCode         | `boolean`                | `false`                           | Visually separate dialcode into the drop down element.                                                        |
 | countryChange            | `<Country>`              | `None`                            | Emits country value when the user selects a country from the dropdown.                                        |
-| excludeCountries         | `<CountryISO>[]`         | `[]`                              | List of exluded countries, that will not be displayed in the dropdown.
+| excludeCountries         | `<CountryISO>[]`         | `[]`                              | List of exluded countries, that will not be displayed in the dropdown.                                        |
+
 ## Supported Formats
 
 Following formats are supported
