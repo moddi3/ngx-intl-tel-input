@@ -16,8 +16,7 @@
     "copy-files": "npm run copy-license && npm run copy-readme",
     "npm_pack": "npm run copy-files && cd dist/ngx-intl-tel-input && npm pack",
     "package": "npm run build_lib && npm run npm_pack",
-    "pub": "npm version patch --force && cd dist/ngx-intl-tel-input npm publish",
-    "postinstall": "ngcc"
+    "pub": "npm version patch --force && cd dist/ngx-intl-tel-input npm publish"
   },
   "dependencies": {
     "@angular/animations": "^16.0.0",

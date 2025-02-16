@@ -11,7 +11,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci
-          npm run build_lib
-          npm run build
+          yarn install
+          yarn build_lib
+          yarn build
 
